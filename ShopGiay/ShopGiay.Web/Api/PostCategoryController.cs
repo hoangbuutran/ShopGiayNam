@@ -6,12 +6,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using TeduShop.Model.Models;
-using TeduShop.Service;
-using TeduShop.Web.Infrastructure.Core;
-using TeduShop.Web.Models;
-using TeduShop.Web.Infrastructure.Extensions;
+using ShopGiay.Service;
+using ShopGiay.Web.Infrastructure.Core;
+using ShopGiay.Web.Models;
+using ShopGiay.Web.Infrastructure.Extensions;
 
-namespace TeduShop.Web.Api
+namespace ShopGiay.Web.Api
 {
     [RoutePrefix("api/postcategory")]
     public class PostCategoryController : ApiControllerBase

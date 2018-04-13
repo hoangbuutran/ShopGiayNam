@@ -1,0 +1,5 @@
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Commom\bin\Debug\ShopGiay.Commom.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Commom\bin\Debug\ShopGiay.Commom.pdb
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Commom\obj\Debug\ShopGiay.Commom.csprojResolveAssemblyReference.cache
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Commom\obj\Debug\ShopGiay.Commom.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Commom\obj\Debug\ShopGiay.Commom.pdb

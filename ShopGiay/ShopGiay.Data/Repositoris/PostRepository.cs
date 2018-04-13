@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using TeduShop.Data.Infrastructure;
-using TeduShop.Model.Models;
+using ShopGiay.Data.Infrastructure;
+using ShopGiay.Model.Models;
 using System.Linq;
 
-namespace TeduShop.Data.Repositories
+namespace ShopGiay.Data.Repositories
 {
     public interface IPostRepository : IRepository<Post>
     {

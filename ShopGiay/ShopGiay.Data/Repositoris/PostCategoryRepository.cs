@@ -1,7 +1,7 @@
-﻿using TeduShop.Data.Infrastructure;
-using TeduShop.Model.Models;
+﻿using ShopGiay.Data.Infrastructure;
 
-namespace TeduShop.Data.Repositories
+
+namespace ShopGiay.Data.Repositories
 {
     public interface IPostCategoryRepository : IRepository<PostCategory>
     {

@@ -1,0 +1,10 @@
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\bin\Debug\ShopGiay.Model.dll.config
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\bin\Debug\ShopGiay.Model.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\bin\Debug\ShopGiay.Model.pdb
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\bin\Debug\EntityFramework.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\bin\Debug\EntityFramework.xml
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\obj\Debug\ShopGiay.Model.csprojResolveAssemblyReference.cache
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\obj\Debug\ShopGiay.Model.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Model\obj\Debug\ShopGiay.Model.pdb

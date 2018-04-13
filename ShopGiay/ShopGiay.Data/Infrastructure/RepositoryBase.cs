@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TeduShop.Data.Infrastructure
+namespace ShopGiay.Data.Infrastructure
 {
     public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
