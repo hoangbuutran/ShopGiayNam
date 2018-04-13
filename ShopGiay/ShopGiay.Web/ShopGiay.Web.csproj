@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>3c06aef2-3cdd-4180-a158-5c1869fd200b</ProjectGuid>
+    <ProjectGuid>{776D1448-C734-4E9D-A78C-339F8CCB7187}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -15,7 +15,7 @@
     <AssemblyName>ShopGiay.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -39,6 +39,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -117,19 +123,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Api\PostCategoryController.cs" />
+    <Compile Include="Api\PostController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\Core\ApiControllerBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -145,13 +171,37 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Infrastructure\Extensions\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopGiay.Commom\ShopGiay.Commom.csproj">
+      <Project>{091d700a-fa8f-4e2b-a106-db0f368d61f8}</Project>
+      <Name>ShopGiay.Commom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopGiay.Data\ShopGiay.Data.csproj">
+      <Project>{c4487c3b-79d4-49f3-b844-7fa7debf8bf1}</Project>
+      <Name>ShopGiay.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopGiay.Model\ShopGiay.Model.csproj">
+      <Project>{526ba9d6-cfee-4c24-9ecf-be6cf6de6cb1}</Project>
+      <Name>ShopGiay.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopGiay.Service\ShopGiay.Service.csproj">
+      <Project>{3421d2ec-b202-411b-b2aa-06c9eedf12d4}</Project>
+      <Name>ShopGiay.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -167,12 +217,11 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>False</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>3234</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>
-          </IISUrl>
+          <IISUrl>http://localhost:3234/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

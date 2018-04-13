@@ -1,53 +1,73 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-	<PropertyGroup>
-		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-		<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-		<ProjectGuid>b5a6bbff-a4eb-4364-801c-245310d372b1</ProjectGuid>
-		<OutputType>Library</OutputType>
-		<AppDesignerFolder>Properties</AppDesignerFolder>
-		<RootNamespace>ShopGiay.Data</RootNamespace>
-		<AssemblyName>ShopGiay.Data</AssemblyName>
-		<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-		<FileAlignment>512</FileAlignment>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
-		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-		<DebugType>pdbonly</DebugType>
- 		<Optimize>true</Optimize>
-		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
-	</PropertyGroup>
-	<ItemGroup>
-		<Reference Include="System"/>
-		
-		<Reference Include="System.Core"/>
-		<Reference Include="System.Xml.Linq"/>
-		<Reference Include="System.Data.DataSetExtensions"/>
-		
-		
-		<Reference Include="Microsoft.CSharp"/>
- 		
-		<Reference Include="System.Data"/>
-		<Reference Include="System.Xml"/>
-	</ItemGroup>
-	<ItemGroup>
-		<Compile Include="Class1.cs" />
-
-		<Compile Include="Properties\AssemblyInfo.cs" />
-	</ItemGroup>
-	<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4487C3B-79D4-49F3-B844-7FA7DEBF8BF1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ShopGiay.Data</RootNamespace>
+    <AssemblyName>ShopGiay.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositoris\PostCategoryRepository.cs" />
+    <Compile Include="Repositoris\PostRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopGiay.Commom\ShopGiay.Commom.csproj">
+      <Project>{091d700a-fa8f-4e2b-a106-db0f368d61f8}</Project>
+      <Name>ShopGiay.Commom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -55,5 +75,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>
