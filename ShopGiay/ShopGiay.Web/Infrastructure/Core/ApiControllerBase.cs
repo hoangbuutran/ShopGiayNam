@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ShopGiay.Model.Model;
+using ShopGiay.Service;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;

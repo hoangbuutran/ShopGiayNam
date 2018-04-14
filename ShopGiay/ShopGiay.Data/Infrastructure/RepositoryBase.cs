@@ -11,7 +11,7 @@ namespace ShopGiay.Data.Infrastructure
     public abstract class RepositoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
-        private TeduShopDbContext dataContext;
+        private ShopGiayDbContext dataContext;
         private readonly IDbSet<T> dbSet;
 
         protected IDbFactory DbFactory
@@ -20,7 +20,7 @@ namespace ShopGiay.Data.Infrastructure
             private set;
         }
 
-        protected TeduShopDbContext DbContext
+        protected ShopGiayDbContext DbContext
         {
             get { return dataContext ?? (dataContext = DbFactory.Init()); }
         }
@@ -48,11 +48,13 @@ namespace ShopGiay.Data.Infrastructure
         {
             return dbSet.Remove(entity);
         }
+
         public virtual T Delete(int id)
         {
             var entity = dbSet.Find(id);
             return dbSet.Remove(entity);
         }
+
         public virtual void DeleteMulti(Expression<Func<T, bool>> where)
         {
             IEnumerable<T> objects = dbSet.Where<T>(where).AsEnumerable();

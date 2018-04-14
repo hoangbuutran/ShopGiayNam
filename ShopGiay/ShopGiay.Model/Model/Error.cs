@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ShopGiay.Model.Models
+namespace ShopGiay.Model.Model
 {
     [Table("Errors")]
     public class Error

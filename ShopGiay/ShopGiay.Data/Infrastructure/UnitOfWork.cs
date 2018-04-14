@@ -9,14 +9,14 @@ namespace ShopGiay.Data.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IDbFactory dbFactory;
-        private TeduShopDbContext dbContext;
+        private ShopGiayDbContext dbContext;
 
         public UnitOfWork(IDbFactory dbFactory)
         {
             this.dbFactory = dbFactory;
         }
 
-        public TeduShopDbContext DbContext
+        public ShopGiayDbContext DbContext
         {
             get { return dbContext ?? (dbContext = dbFactory.Init()); }
         }

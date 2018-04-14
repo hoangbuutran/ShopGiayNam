@@ -1,1 +1,11 @@
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\ShopGiay.Service.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\ShopGiay.Service.pdb
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\ShopGiay.Data.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\ShopGiay.Model.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\EntityFramework.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\ShopGiay.Data.pdb
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\ShopGiay.Model.pdb
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\bin\Debug\EntityFramework.xml
 E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\obj\Debug\ShopGiay.Service.csprojResolveAssemblyReference.cache
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\obj\Debug\ShopGiay.Service.dll
+E:\TRANHOANGBUU\SDC\Angular4\service\ShopGiayNam\ShopGiay\ShopGiay.Service\obj\Debug\ShopGiay.Service.pdb

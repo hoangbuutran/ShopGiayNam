@@ -47,11 +47,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Error.cs" />
+    <Compile Include="Model\GIOI_THIEU.cs" />
+    <Compile Include="Model\KHACH_HANG.cs" />
+    <Compile Include="Model\LIEN_HE.cs" />
+    <Compile Include="Model\LOAI_SAN_PHAM.cs" />
+    <Compile Include="Model\ORDER.cs" />
+    <Compile Include="Model\ORDER_DETAIL.cs" />
+    <Compile Include="Model\PHAN_QUYEN.cs" />
+    <Compile Include="Model\SAN_PHAM.cs" />
+    <Compile Include="Model\THUONG_HIEU.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
