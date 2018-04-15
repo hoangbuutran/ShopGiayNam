@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ErrorService.cs" />
     <Compile Include="LoaiSanPhamService.cs" />
+    <Compile Include="SanPhamService.cs" />
     <Compile Include="ThuongHieuService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
